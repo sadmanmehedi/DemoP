@@ -1,11 +1,10 @@
-const express = require('express');
-const app = express()
+const express = require("express");
+const app = express();
 
-app.get('/',(req,res)=>{
+app.get("/", (req, res) => {
+  res.send("Welcome Azure");
+});
 
-    res.send('Welcome Azure')
-})
-
-app.listen(8080,()=>{
-console.log('Server is  on port 8080')
-})
+app.listen(process.env.PORT || 8081, () => {
+  console.log("Server is  on port 8080");
+});
